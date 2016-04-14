@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>es.uniovi.asw</groupId>
-	<artifactId>VoteCounting_i1b</artifactId>
-	<name>VoteCounting_i1b</name>
+	<artifactId>VoteCountingModel_i1b</artifactId>
+	<name>VoteCountingModel_i1b</name>
 	<version>0.0.1</version>
 
 	<parent>
