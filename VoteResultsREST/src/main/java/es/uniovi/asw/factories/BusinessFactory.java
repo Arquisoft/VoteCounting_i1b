@@ -11,9 +11,9 @@ public class BusinessFactory {
 
 	@Autowired ResultsAction results;
 	
-	public VotingResults getResults(Voting voting) {
+	public VotingResults getResults(long id) {
 		
-		return results.execute(voting);		
+		return results.execute(id);		
 	}
 
 }

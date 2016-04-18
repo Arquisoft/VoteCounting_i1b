@@ -17,10 +17,10 @@ public class ResultsAction {
 	@Autowired
 	 Factories factories;
 	
-	public VotingResults execute(Voting voting) {
+	public VotingResults execute(long id) {
 		try {
 			
-			Voting actualVoting = factories.getPersistenceFactory().getVotingRepository().findOne(voting.getId());
+			Voting actualVoting = factories.getPersistenceFactory().getVotingRepository().findOne(id);
 			VotingResults votingRes = new VotingResults(actualVoting.getDescription());
 			for (Vote vote : actualVoting.getVotes()) {
 				String option = vote.getOption();
