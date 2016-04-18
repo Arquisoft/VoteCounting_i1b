@@ -93,6 +93,11 @@
 			<version>1.7.0</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>es.uniovi.asw</groupId>
+			<artifactId>VoteCountingModel_i1b</artifactId>
+			<version>0.0.1</version>
+		</dependency>
 	</dependencies>
 
 	<properties>
