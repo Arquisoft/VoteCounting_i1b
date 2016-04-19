@@ -10,6 +10,8 @@ Vote Counting
 # Authors
 
 * Jose Labra
+* Daniel Cuesta
+* Carlos Suárez
 
 
 
