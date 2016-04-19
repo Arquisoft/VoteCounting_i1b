@@ -18,7 +18,7 @@ public class Main {
   public String landing(Model model) {
     LOG.info("Landing page access");
     RestTemplate rt = new RestTemplate();
-    String response = rt.getForObject("http://localhost:8080/voting?id={id}", String.class,"1");
+    String response = rt.getForObject("http://localhost:8080/votings", String.class);
     model.addAttribute("response",response);
     return "landing";
   }
