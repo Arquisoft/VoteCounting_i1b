@@ -11,6 +11,8 @@ public class VotingResults
 	public VotingResults(String votingDescription) {
 		this.votingDescription=votingDescription;
 	}
+	public VotingResults() {
+	}
 	public String getVoting() {
 		return votingDescription;
 	}

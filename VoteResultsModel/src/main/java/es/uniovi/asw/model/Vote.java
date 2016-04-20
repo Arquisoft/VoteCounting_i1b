@@ -22,6 +22,10 @@ public class Vote {
 		this.voting = voting;
 		this.option = option;
 	}
+	public Vote(long id,Voting voting, String option) {
+		this(voting,option);
+		this.id=id;
+	}
 
 	public String getOption() {
 		return option;
@@ -71,6 +75,10 @@ public class Vote {
 	@Override
 	public String toString() {
 		return "Vote [id=" + id + ", voting=" + voting + ", option=" + option + "]";
+	}
+
+	public void setId(long id) {
+		this.id=id;
 	}
 
 }

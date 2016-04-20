@@ -29,7 +29,8 @@ public class Voting {
 		this.votes = votes;
 	}
 	public Voting(String description) {
-		this.description=description;
+		this();
+		this.description=description;		
 	}
 	public Voting(){}
 

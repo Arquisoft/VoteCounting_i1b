@@ -6,9 +6,7 @@ public class VotingMinimalInfoAdapter {
 	private Long id;
 	private String description;
 	
-	public VotingMinimalInfoAdapter(String description) {
-		this.description=description;
-	}
+	
 	public VotingMinimalInfoAdapter(){}
 
 	public VotingMinimalInfoAdapter(Voting voting) {
