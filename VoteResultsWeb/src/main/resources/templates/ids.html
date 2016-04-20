@@ -5,12 +5,15 @@
 	<div th:replace="fragments/header :: cabecera">
 		<p>!</p>
 	</div>
+	
 	<script th:inline="javascript">
-            var array = [[${response2}]];</script>
+           
+            </script>
+            
 	<ul>
 		
 		 <li th:each="i : ${response2}">
-			<a th:text="${i.voting} +' ' + Results + ' '+ ${i.results}"></a>
+			<a th:text="${i.voting} +' ' + Results + ' '+ ${i.results}"></a>	
 		</li>
 	</ul>
 </body>
