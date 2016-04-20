@@ -2,7 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: head"></head>
 <body>
-<div th:replace="fragments/header :: cabecera"><p>!</p></div>
-<p th:text="${response}"></p>
+	<div th:replace="fragments/header :: cabecera">
+		<p>!</p>
+	</div>
+	<ul>
+		<li th:each="i : ${response}">
+			<a th:href="|/voting?id=${i.id}|" th:text="${i.description}"></a>
+		</li>
+	</ul>
 </body>
 </html>
