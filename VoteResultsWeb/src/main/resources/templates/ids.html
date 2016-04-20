@@ -6,15 +6,51 @@
 		<p>!</p>
 	</div>
 	
+	<header>
+            
+	</header>	
+		<div class="text-info center-block text-center" style="clear: both">
+			<h3 class="text-primary center-block text-center" id= "nVota"></h3>
+			<h3 class="text-success center-block text-center" style="display:inline-block;">Yes Votes : </h3>	
+			<h3 class="text-success center-block text-center" id= "nYes" style="display:inline-block;"></h3>	
+			<h3 class="text-danger center-block text-center" style="display:inline-block;">No Votes : </h3>	
+			<h3 class="text-danger center-block text-center" id= "nNo" style="display:inline-block;"></h3>	
+		<!-- 	<p th:text="${response2.voting} +' ' + Results + ' '+ ${response2.results}"></p>	 -->
+		</div>
+	<canvas class="center-block text-center" id="myPieChart" width="400" height="400"></canvas>
+	
 	<script th:inline="javascript">
-           
+	var nVotation = [[${response2.voting}]];
+	document.getElementById('nVota').innerHTML = nVotation;
+	var mapIter = [[${response2.results.values()}]];
+	var respYes = [[${response2.results.get("Si")}]];
+	document.getElementById('nYes').innerHTML = respYes;
+	var respNo = [[${response2.results.get("No")}]];
+	document.getElementById('nNo').innerHTML = respNo;
+	var data = [
+	            {
+	                value: respYes,
+	                color:"#F7464A",
+	                highlight: "#FF5A5E",
+	                label: "Yes votes"
+	            },
+	            {
+	                value: respNo,
+	                color: "#46BFBD",
+	                highlight: "#5AD3D1",
+	                label: "No votes"
+	            }
+	        ];
+	var options = {
+            segmentShowStroke : true,
+            animateScale : true,
+            animationEasing : "easeOutBounce",
+       }
+	
+	var ctx = document.getElementById("myPieChart").getContext("2d");
+	var myPieChart = new Chart(ctx).Pie(data,options);
             </script>
             
-	<ul>
-		
-		 <li th:each="i : ${response2}">
-			<a th:text="${i.voting} +' ' + Results + ' '+ ${i.results}"></a>	
-		</li>
-	</ul>
+	
 </body>
 </html>
