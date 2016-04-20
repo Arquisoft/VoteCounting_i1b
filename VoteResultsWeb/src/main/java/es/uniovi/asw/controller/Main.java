@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
 import es.uniovi.asw.model.Voting;
@@ -26,5 +28,14 @@ public class Main {
     model.addAttribute("response",response);
     return "landing";
   }
+  @RequestMapping(value = "/voting" , params = {"id"})
+  public String ids(Model model,@RequestParam(value = "id") Long id ) {
+    LOG.info("Votations page");
+    RestTemplate rt = new RestTemplate();
+    VotingResults response2 = rt.getForObject("http://localhost:8080/voting?id={id}", VotingResults.class, id);
+    model.addAttribute("response2",response2);
+    return "ids";
+  }
+  
   
 }
