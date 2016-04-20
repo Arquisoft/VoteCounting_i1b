@@ -9,9 +9,6 @@ public class VotingResults
 	Map<String, Integer> results = new HashMap<String, Integer>();
 	
 	
-	public VotingResults() {
-	
-	}
 	public VotingResults(String votingDescription) {
 		this.votingDescription=votingDescription;
 	}
