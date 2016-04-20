@@ -1,12 +1,16 @@
 package es.uniovi.asw.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.servlet.ModelAndView;
+
+import es.uniovi.asw.model.Voting;
+import es.uniovi.asw.model.VotingResults;
 
 
 @Controller
@@ -18,7 +22,7 @@ public class Main {
   public String landing(Model model) {
     LOG.info("Landing page access");
     RestTemplate rt = new RestTemplate();
-    String response = rt.getForObject("http://localhost:8080/votings", String.class);
+    Voting[] response = rt.getForObject("http://localhost:8080/votings", Voting[].class);
     model.addAttribute("response",response);
     return "landing";
   }
