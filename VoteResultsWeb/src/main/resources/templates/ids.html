@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head"></head>
+<body>
+	<div th:replace="fragments/header :: cabecera">
+		<p>!</p>
+	</div>
+	<script th:inline="javascript">
+            var array = [[${response2}]];</script>
+	<ul>
+		
+		 <li th:each="i : ${response2}">
+			<a th:text="${i.voting} +' ' + Results + ' '+ ${i.results}"></a>
+		</li>
+	</ul>
+</body>
+</html>
