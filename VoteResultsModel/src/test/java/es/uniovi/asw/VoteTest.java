@@ -44,6 +44,10 @@ public class VoteTest {
 		Vote vote2 = new Vote(1,voting , "Si");
 		vote.setId(1);
 		assertEquals(vote, vote2);
+		assertNotEquals(vote, null);
+		assertNotEquals(vote,new Voting());
+		assertNotEquals(vote,new Vote());
+
 	}
 
 	@Test

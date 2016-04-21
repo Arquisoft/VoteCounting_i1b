@@ -52,6 +52,10 @@ public class VotingTest {
 		v2.setId(1L);
 		voting.setId(1L);
 		assertEquals(voting,v2);
+		assertNotEquals(voting,null);
+		assertNotEquals(voting,new Vote());
+		assertNotEquals(voting,new Voting());
+
 	}
 	@Test
 	public void testHashCode() {

@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import es.uniovi.asw.model.Vote;
 import es.uniovi.asw.model.Voting;
 import es.uniovi.asw.model.VotingMinimalInfoAdapter;
 
@@ -32,6 +33,9 @@ public class VotingMinimalInfoAdapterTest {
 		assertEquals(votingAdap,v2);
 		votingAdap.setId(2L);
 		assertNotEquals(votingAdap,v2);
+		assertNotEquals(votingAdap,null);
+		assertNotEquals(votingAdap,new Vote());
+
 	}
 	@Test
 	public void testDescription() {
