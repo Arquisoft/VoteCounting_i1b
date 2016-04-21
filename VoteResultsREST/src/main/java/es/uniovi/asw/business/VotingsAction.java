@@ -12,10 +12,11 @@ import es.uniovi.asw.model.VotingMinimalInfoAdapter;
 
 @Service
 public class VotingsAction {
-
-	public VotingsAction(){}
+	
 	@Autowired
 	Factories factories;
+	
+	public VotingsAction(){}	
 	
 	public List<VotingMinimalInfoAdapter> execute() {
 		List<VotingMinimalInfoAdapter> votings = new ArrayList<>();

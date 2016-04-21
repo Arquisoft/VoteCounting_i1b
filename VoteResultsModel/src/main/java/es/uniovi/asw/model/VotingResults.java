@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class VotingResults 
 {
-	String votingDescription;	
-	Map<String, Integer> results = new HashMap<String, Integer>();
+	private String votingDescription;	
+	private Map<String, Integer> results = new HashMap<String, Integer>();
 	
 	
 	public VotingResults(String votingDescription) {

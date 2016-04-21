@@ -12,10 +12,9 @@ import es.uniovi.asw.model.VotingResults;
 
 @Service
 public class ResultsAction {
-
-	public ResultsAction(){}
 	@Autowired
 	 Factories factories;
+	public ResultsAction(){}
 	
 	public VotingResults execute(long id) {
 		try {
