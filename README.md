@@ -12,6 +12,19 @@ Vote Counting
 * Jose Labra
 * Daniel Cuesta
 * Carlos Suárez
+* 
+
+
+#How to install:
+
+- cd VoteResultsModel
+- mvn install
+
+- cd VoteResultsREST
+- mvn spring-boot-run
+
+- cd VoteResultsWeb
+- mvn spring-boot-run
 
 
 
