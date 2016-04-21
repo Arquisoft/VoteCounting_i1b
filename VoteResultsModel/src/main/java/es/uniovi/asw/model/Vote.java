@@ -11,7 +11,7 @@ public class Vote {
     @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	private Voting voting;
 	private String option;
 	

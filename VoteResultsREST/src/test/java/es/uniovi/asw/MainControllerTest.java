@@ -9,13 +9,20 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+
+import es.uniovi.asw.model.Vote;
+import es.uniovi.asw.model.Voting;
+import es.uniovi.asw.persistence.VoteRepository;
+import es.uniovi.asw.persistence.VotingRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
@@ -45,6 +52,4 @@ public class MainControllerTest {
     	.andExpect(content().string(containsString("Voting 1")))
     	.andExpect(content().string(containsString("{\"No\":2")));
   }
-
-
-}
+ }

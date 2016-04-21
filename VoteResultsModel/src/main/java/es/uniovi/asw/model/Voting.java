@@ -2,6 +2,7 @@ package es.uniovi.asw.model;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -19,7 +20,7 @@ public class Voting {
 	private Long id;
 	private String description;
 	
-	@OneToMany(mappedBy = "voting")
+	@OneToMany(mappedBy = "voting", cascade = CascadeType.PERSIST)
 	private Set<Vote> votes;
 
 	public Set<Vote> getVotes() {

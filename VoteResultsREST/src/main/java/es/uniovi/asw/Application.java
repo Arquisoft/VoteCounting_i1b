@@ -40,12 +40,12 @@ public class Application {
 	public CommandLineRunner votes(VoteRepository repository) {
 		return (args) -> {
 			// save a couple of votings
-			repository.save(new Vote(vot1, "Si"));
-			repository.save(new Vote(vot1, "No"));
-			repository.save(new Vote(vot1, "No"));
-			repository.save(new Vote(vot2, "Si"));
-			repository.save(new Vote(vot2, "Si"));
-			repository.save(new Vote(vot2, "No"));
+			repository.save(new Vote(1,vot1, "Si"));
+			repository.save(new Vote(2,vot1, "No"));
+			repository.save(new Vote(3,vot1, "No"));
+			repository.save(new Vote(4,vot2, "Si"));
+			repository.save(new Vote(5,vot2, "Si"));
+			repository.save(new Vote(6,vot2, "No"));
 
 		};
 	}

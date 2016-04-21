@@ -5,7 +5,8 @@ Feature: Landing page
 	  And another one with description 'Voting 2'
 	  And another one with description 'Voting 3'
 	When the user access the main page of the application
-	Then a list of 3 votings must be shown
-	  And Voting 1 must have the description 'Voting 1'
-	  And Voting 2 must have the description 'Voting 2'
-	  And Voting 3 must have the description 'Voting 3'
+	Then the client receives status code of 200
+	  And a list of 3 votings must be shown
+	  And the client receives the string "Voting 1"
+	  And the client receives the string "Voting 2"
+	  And the client receives the string "Voting 3"
