@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/header :: head"></head>
+<head th:replace="fragments/header :: head">
+</head>
 <body>
 	<div th:replace="fragments/header :: cabecera">
 		<p>!</p>
@@ -13,15 +14,15 @@
 			<h3 class="text-primary center-block text-center" id= "nVota"></h3>
 			<p th:text="Results + ' '+ ${response2.results}"></p>	
 		</div>
-	<canvas class="center-block text-center" id="myPieChart" width="400" height="400"></canvas>
-	
+	<canvas class="center-block text-center" id="myPieChart" width="400" height="400">	</canvas>
+	<div id="js-legend" class="chart-legend"></div>
 	<script th:inline="javascript">
 	var nVotation = [[${response2.voting}]];
 	document.getElementById('nVota').innerHTML = nVotation;
 	var mapIter = [[${response2.results.values()}]];
 	var mapa = [[${response2}]];
 	var data = [];
-	var colorsHigh = [{color:"#F7464A",highlight:"#FF5A5E"},{color:"#46BFBD",highlight:"#5AD3D1"}];
+	var colorsHigh = [{color:"#F7464A",highlight:"#FF5A5E"},{color:"#46BFBD",highlight:"#5AD3D1"},{color: "#FDB45C", highlight: "#FFC870"},{color: "#4D5360",highlight: "#616774"}];
 	var keys = (Object.keys(mapa.results));
 	var i = 0;
 	for (key in mapIter){
@@ -43,8 +44,8 @@
 	
 	var ctx = document.getElementById("myPieChart").getContext("2d");
 	var myPieChart = new Chart(ctx).Pie(data,options);
-            </script>
-            
 	
+	//document.getElementById("js-legend").innerHTML = myPieChart.generateLegend();
+            </script>
 </body>
 </html>
