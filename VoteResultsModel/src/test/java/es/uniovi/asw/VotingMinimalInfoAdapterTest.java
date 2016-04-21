@@ -30,6 +30,8 @@ public class VotingMinimalInfoAdapterTest {
 		v2.setId(1L);
 		votingAdap.setId(1L);
 		assertEquals(votingAdap,v2);
+		votingAdap.setId(2L);
+		assertNotEquals(votingAdap,v2);
 	}
 	@Test
 	public void testDescription() {
