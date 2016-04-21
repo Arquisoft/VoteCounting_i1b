@@ -35,6 +35,7 @@ public class VotingMinimalInfoAdapterTest {
 		assertNotEquals(votingAdap,v2);
 		assertNotEquals(votingAdap,null);
 		assertNotEquals(votingAdap,new Vote());
+		assertNotEquals(votingAdap, new VotingMinimalInfoAdapter());
 
 	}
 	@Test
