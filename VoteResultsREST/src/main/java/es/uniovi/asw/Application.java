@@ -46,6 +46,12 @@ public class Application {
 			repository.save(new Vote(4,vot2, "Si"));
 			repository.save(new Vote(5,vot2, "Si"));
 			repository.save(new Vote(6,vot2, "No"));
+			repository.save(new Vote(7,vot2, "No"));
+			repository.save(new Vote(8,vot2, "NS/NC"));
+			repository.save(new Vote(9,vot2, "Indiferente"));
+			repository.save(new Vote(10,vot2, "Indiferente"));
+			repository.save(new Vote(11,vot2, "No"));
+
 
 		};
 	}
